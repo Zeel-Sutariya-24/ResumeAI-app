@@ -15,7 +15,8 @@ const FileUpload = ({ setResumeText }) => {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:5000/upload/extract-text", {
+      
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/upload/extract-text`, {
         method: "POST",
         body: formData,
       });
