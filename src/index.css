@@ -1,0 +1,49 @@
+/* Body background must be transparent */
+body {
+  background: transparent;
+  margin: 0;
+  
+}
+html, body {
+  overflow-x: hidden;
+}
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth color transitions for dark mode */
+* {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* Footer link styling */
+.footer-link {
+  @apply text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition;
+}
+
+/* Forces resume preview to export in white, even in dark mode */
+#resume-preview.force-white {
+  background: white !important;
+  color: black !important;
+}
+
+#resume-preview.force-white * {
+  background: transparent !important;
+  color: black !important;
+}
+
+/* Remove rounded corners & borders ONLY during export */
+#resume-preview.export-mode {
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  /* padding: 20px !important; */
+  padding-left: 50px !important;
+}
+
+/* Page breaks between long sections */
+html2pdf .page-break {
+  page-break-before: always;
+}
