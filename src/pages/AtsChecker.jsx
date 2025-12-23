@@ -198,7 +198,7 @@ const AtsChecker = () => {
       setLoadingFlags(true);
       setRedFlags([]);
 
-      const res = await fetch("http://localhost:5000/api/red-flags", {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/red-flags`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ resumeText, jobDescription })
@@ -224,7 +224,7 @@ const AtsChecker = () => {
     try {
       setLoadingRecruiterView(true);
 
-      const res = await fetch("http://localhost:5000/api/recruiter-view", {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/recruiter-view`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ resumeText: atsResumeText })
