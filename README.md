@@ -54,6 +54,22 @@ The application displays AI-generated:
 - Loading states during AI processing
 
 ## Application Flow
+User
+|
+| Upload Resume
+↓
+React Frontend
+|
+| API Request
+↓
+Node.js Backend
+|
+| Document Processing + AI Analysis
+↓
+Analysis Results
+|
+↓
+React UI
 
 ## Engineering Notes
 
