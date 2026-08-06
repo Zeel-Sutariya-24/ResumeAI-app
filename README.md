@@ -54,3 +54,15 @@ The application displays AI-generated:
 - Loading states during AI processing
 
 ## Application Flow
+
+## Engineering Notes
+
+A major challenge was handling different resume formats and ensuring users received meaningful feedback even when document extraction or AI processing produced unexpected results.
+
+The frontend includes validation and error handling to provide a reliable experience when communicating with backend services.
+
+## Future Improvements
+
+- Migration to the newer Next.js implementation
+- Improved resume preview experience
+- Additional user customization features
