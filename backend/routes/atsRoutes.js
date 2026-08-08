@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { extractStrictJson, normalizeFlags } from "../utils/strictJson.js";
 
 const router = express.Router();
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
 router.post("/ats-check", atsCheck);
 
