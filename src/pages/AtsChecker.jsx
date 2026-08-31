@@ -124,7 +124,7 @@ const AtsChecker = () => {
       setOptLoading(true);
 
       const res = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/api/ats-check`,
+        `${process.env.REACT_APP_API_BASE_URL}/api/optimize-resume`,
         {
           personalInfo,
           currentSummary: summary,
