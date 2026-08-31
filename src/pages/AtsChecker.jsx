@@ -80,7 +80,7 @@ const AtsChecker = () => {
     }, 80);
 
     try {
-      const response = await fetch("http://localhost:5000/api/ats-check", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/ats-check`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -88,6 +88,7 @@ const AtsChecker = () => {
           jobDescription: atsJobDescription
         })
       });
+
 
       const data = await response.json();
       setAtsResult(data);
@@ -123,7 +124,7 @@ const AtsChecker = () => {
       setOptLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/optimize-resume",
+        `${process.env.REACT_APP_API_BASE_URL}/api/ats-check`,
         {
           personalInfo,
           currentSummary: summary,
